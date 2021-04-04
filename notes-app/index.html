@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notes App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -15,12 +15,18 @@
         <textarea placeholder="Enter your note here..."></textarea>
 
         <div class="color">
+          <!-- simply a label that displays text -->
           <label for="color">Pick a Color : </label>
-          <input type="color" id="color" name="color" value="#000">
+          <!-- input tag will allow the user to pick the color -->
+          <input type="color" id="color" name="color" value="#000" />
+          <!-- simply a label that displays text -->
           <label id="sizelabel" for="size">Size : </label>
-          <input type="number" value="17" id="size">
+          <!-- input tag will allow the user to adjust font size -->
+          <input type="number" value="17" id="size" />
         </div>
 
+        <!-- This button will add a note and start a fresh note -->
+        <!-- we are going to target this button and add the functionality -->
         <button id="add">Add</button>
       </div>
       <div class="notes"></div>
