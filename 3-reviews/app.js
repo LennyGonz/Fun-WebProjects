@@ -47,21 +47,19 @@ const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
 const randomBtn = document.querySelector(".random-btn");
 
-// set starting item
+// this global variable will serve as our way index of the reviews array
 let currentItem = 0;
 
-// load initial item
+// When the window loads -> immediately run the function showPerson
 window.addEventListener("DOMContentLoaded", function () {
-  const item = reviews[currentItem];
-  img.src = item.img;
-  author.textContent = item.name;
-  job.textContent = item.job;
-  info.textContent = item.text;
+  showPerson();
 });
 
-// show person based on item
+// show person based on item (person is an integer)
 function showPerson(person) {
+  // grab an object from the reviews array
   const item = reviews[person];
+  // parse the object
   img.src = item.img;
   author.textContent = item.name;
   job.textContent = item.job;
@@ -85,8 +83,6 @@ prevBtn.addEventListener("click", function () {
 });
 // show random person
 randomBtn.addEventListener("click", function () {
-  console.log("hello");
-
   currentItem = Math.floor(Math.random() * reviews.length);
   showPerson(currentItem);
 });
