@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlexBox</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="parent">
+    Static Positioning <br>
+    Parent
+    <div class="child-one">One</div>
+    <div class="child-two">Two</div>
+    <div class="child-three">Three</div>
+  </div>
+  <br>
+  <div class="rparent">
+    Relative Positioning <br>
+    Parent
+    <div class="rchild-one">One</div>
+    <div class="rchild-two">Two</div>
+    <div class="rchild-three">Three</div>
+  </div>
+  <p>
+    Notice that there is no difference in the output (between static & relative Positioning)
+    In other words, static and relative positioning are the same, unless we are using top, bottom, left, and right with relative.
+  </p>
+  <div class="r2parent">
+    Relative Positioning (using properties top, left, bottom, right) <br>
+    Parent
+    <div class="r2child-one">One</div>
+    <div class="r2child-two">Two</div>
+    <div class="r2child-three">Three</div>
+  </div>
+  <br>
+  <p>
+    We are using Top with Relative in child-one
+    This throws child-one out of the document flow, and it will shift from the top
+    to the bottom by 10px
+    You can see it covering the child-two element
+    And it will be similar if you use left, right, or bottom, according to the property
+    The main reason why child-one is covering child-two is that child-one is no longer part of the normal document flow, but child-two and child-three are.
+  </p>
+  <br>
+  <p>
+    Asbolute positioning, completely removes the element from the flow of the document
+    All other elements will ignore the element which has the absolute property
+
+    And if we use Top, Bottom, Left, or Right with absolute, it will arrange the element according to the parent container, with the condition that the parents container must also be absolute-positioned
+  </p>
+  <div class="aparent">
+    Relative Positioning (using properties top, left, bottom, right) <br>
+    Parent
+    <div class="achild-one">One</div>
+    <div class="achild-two">Two</div>
+    <div class="achild-three">Three</div>
+  </div>
+  <p>
+    Here, the child-one is outside the normal flow of the document, if we set Top as 0px
+
+    That is, because child-one is absolute, and the parent is static
+
+    But what if we set the parent to absolute with top at 0px?
+  </p>
+  <br>
+</body>
+</html>
