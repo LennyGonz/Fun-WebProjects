@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 50px 80px;
+  height: 400px;
+  align-content: center;
+  background-color: crimson;
+  padding: 10px;
+}
+
+.container > .child {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 30px;
+  margin: 5px;
+}
