@@ -1,19 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Poppins:wght@300&display=swap");
 
-/* Base Styles */
-
+/* Override default style and set padding and margin to nothing */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+/* White text throughout */
 body {
   font-family: "lato", sans-serif;
   color: white;
 }
 
+/* Make all link text black with no text decoration */
 a {
   color: black;
   text-decoration: none;
@@ -37,10 +38,12 @@ p {
   font-size: 30px;
 }
 
+/* All images must not be larger than parent container */
 img {
   width: 100%;
 }
 
+/* No styling on list items */
 li {
   list-style-type: none;
 }
@@ -54,19 +57,21 @@ p {
 }
 
 /* Classes */
-
+/* Centers it, sets a maximum width and makes sure elements can flow past it*/
 .container {
   margin: 0 auto;
   max-width: 1200px;
   overflow: visible;
 }
 
+/* Sets background color, height and padding*/
 .navbar {
   background-color: purple;
   height: 70px;
   padding: 0 30px;
 }
 
+/* Sets font size, reduces font-weight, adds margin and line height */
 .navbar h1 {
   font-size: 30px;
   font-weight: 300;
@@ -85,6 +90,7 @@ p {
   display: flex;
 }
 
+/* Changes the color of both links to white, adds padding between them and margin as well */
 .navbar a {
   color: white;
   padding: 9px;
