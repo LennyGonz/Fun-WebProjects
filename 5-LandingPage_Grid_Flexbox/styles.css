@@ -152,6 +152,7 @@ p {
   margin: auto;
 }
 
+/* Change typeface and its size */
 .little-info {
   font-size: 15px;
   font-family: "poppins", sans-serif;
