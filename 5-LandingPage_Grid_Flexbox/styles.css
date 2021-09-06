@@ -187,6 +187,7 @@ p {
   justify-content: space-around;
 }
 
+/* We add styling to the font awesome icons */
 .stats {
   padding: 45px 50px;
   text-align: center;
@@ -201,6 +202,8 @@ p {
 .stats .fa {
   color: purple;
 }
+
+/* end of styling for font awesome icons */
 
 .testimonial {
   color: black;
