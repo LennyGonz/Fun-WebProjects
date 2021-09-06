@@ -199,3 +199,114 @@ Now, we need to style both of our form inputs because they don't look so nice. W
 
 ## How to build the lower part of the page
 
+The lower part of the page is going to contain two sections, the stats section and the testimonials section
+
+The stats container which displays the services offered by Skilllz will be made up of three `div`s, each of which houses a font awesome icon, an `h3` of class `title`, and a paragraph `p` of class `text`.
+
+The testimonial container will hold the testimonials of three random people who learned using Skillz.
+I grabbed the pictures from unsplash.
+
+```html
+<div class="lower-container container">
+  <section class="stats">
+    <div class="flex">
+      <div class="stat">
+        <i class="fa fa-folder-open fa-2x" aria-hidden="true"></i>
+        <h3 class="title">Over 300 available courses</h3>
+        <p class="text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="stat">
+        <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
+        <h3 class="title">Free certificate offered on all courses</h3>
+        <p class="text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="stat">
+        <i class="fa fa-credit-card-alt fa-2x" aria-hidden="true"></i>
+        <h3 class="title">Book 1on1 session for as low as $5</h3>
+        <p class="text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
+  </section>
+```
+
+The text color is `white` so it looks like a blank page
+
+```css
+/* Centers the container, sets a maximum width
+.lower-container {
+  margin: 120px auto;
+  padding: 0;
+  max-width: 1400px;
+}
+
+
+/* Targets all h3 with class of title */
+.title {
+  color: black;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+/* Targets the paragraphs with class name of text */
+.text {
+  color: black;
+  font-size: 19px;
+  width: 100%;
+  padding: 10px;
+  margin: 0, 20px;
+  text-align: justify;
+}
+```
+
+The added styling makes our text visible now
+
+We intend for all of the three stat divs to be aligned horizontally (side-by-side). 
+To achieve that, we will once again be using CSS Flexbox:
+
+```css
+/* Display horizontally, put a little space around them */
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Add some padding around the container. Align text centrally */
+.stats {
+  padding: 45px 50px;
+  text-align: center;
+}
+
+/* Set margin and width */
+.stat {
+  margin: 0 30px;
+  text-align: center;
+  width: 800px;
+}
+```
+
