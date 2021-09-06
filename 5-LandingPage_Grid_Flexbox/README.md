@@ -81,9 +81,121 @@ Instead, we want them to be displayed side-by-side. Guess how we do that? **With
 
 To add a nice effect, we target the puesdo-element `hover` so our links are a different shade of purple when the user hovers over them
 
+<hr>
+
 ## How to Build the Showcase Area
 
 The showcase area is going to house the headline text, supporting text, a form for signing up new users, as well as a headline image.
 
 This section is going to be divided in two: the left side and the right side. In other words, it will be displayed as a grid of two units.
+
+```html
+<!-- START SHOWCASE -->
+<section class="showcase">
+  <div class="container">
+    <div class="grid">
+      <div class="grid-item-1">
+        <div class="showcase-text">
+          <h1>Learn any digital skill of your choice today</h1>
+          <p class="supporting-text">
+            Over 30,000 students currently learn with us
+          </p>
+        </div>
+        <div class="showcase-form">
+          <form action="">
+            <input type="email" placeholder="Enter your email address" />
+            <input type="submit" class="btn" value="Start Learning" />
+          </form>
+          <p class="little-info">
+            Try out our free courses today. No risk, no credit card required
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-item-2">
+        <div class="image">
+          <img src="./images/transparent.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END SHOWCASE -->
+```
+
+```css
+.showcase {
+  height: 300px;
+  background-color: purple;
+}
+
+/* Adds margin below the text */
+.showcase p {
+  margin-bottom: 30px;
+}
+
+/* Adds a shadow below the image */
+.showcase img {
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+}
+
+/* Adds some padding on the form content */
+.showcase-form {
+  padding-left: 7px;
+}
+```
+
+Inside the showcase container there will be two sections (grids)
+
+With the grid class registered on that container, we can align its content using CSS grid display like this:
+
+```css
+.grid {
+  overflow: visible;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+```
+This will create two columns inside of our showcase container. 
+The first part will take up 60 percent of the container, and the second part will take up the remaining 40 percent of the container.
+
+The overflow visible will ensure that the image (if bigger than the container) will flow beyond the container.
+
+Next, we need to set some space between the navigation area and the showcase area.
+
+```css
+.grid-item-1,
+.grid-item-2 {
+  position: relative;
+  top: 50px;
+}
+```
+
+Now, we need to style both of our form inputs because they don't look so nice. We select the first input by its type (email) and select the second by its class name, `btn`
+
+```css
+.showcase input[type='email'] {
+  padding: 10px 70px 10px 0;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  padding-left: 6px;
+}
+
+.btn {
+  border-radius: 6px;
+  padding: 12px 20px;
+  background: #9867C5;
+  border: none;
+  margin-left: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+```
+
+<hr>
+
+## How to build the lower part of the page
 
