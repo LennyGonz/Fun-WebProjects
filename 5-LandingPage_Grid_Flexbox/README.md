@@ -310,3 +310,7 @@ To achieve that, we will once again be using CSS Flexbox:
 }
 ```
 
+<hr>
+
+## How to build the testimonials page
+
