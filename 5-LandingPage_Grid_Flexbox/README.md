@@ -314,3 +314,106 @@ To achieve that, we will once again be using CSS Flexbox:
 
 ## How to build the testimonials page
 
+In the second section inside of the lower container `div` of the page is the testimonials section.
+
+This section is going to be made up of three cards, each of which contains the image of the person (clipped inside a circle), their name, and the person's testimonial.
+
+```html
+<section class="testimonials">
+  <div class="container">
+    <div class="testimonial grid-3">
+      <div class="card">
+        <div class="circle">
+          <img src="./images/4.jpg" alt="" />
+        </div>
+        <h3>Aston</h3>
+        <p>
+          I have learnt web development using this platfrom and I am going
+          to say this is the best platform for learning. Absolutely worth
+          the investment!
+        </p>
+      </div>
+      <div class="card">
+        <div class="circle">
+          <img src="./images/5.jpg" alt="" />
+        </div>
+        <h3>Beth</h3>
+        <p>
+          I have learnt copywriting using this platfrom and I am going to
+          say this is the best platform for learning. Absolutely worth the
+          investment!
+        </p>
+      </div>
+      <div class="card">
+        <div class="circle">
+          <img src="./images/6.jpg" alt="" />
+        </div>
+        <h3>Chris</h3>
+        <p>
+          I have learnt affilitate marketing using this platfrom and I am
+          going to say this is the best platform for learning. Absolutely
+          worth the investment!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+we set the image to take up the height of its parent container:
+
+```css
+/* Wrap the image inside a cirle shape and set height to take up all of parent element */
+
+.testimonial img {
+  height: 100%;
+  clip-path: circle();
+}
+
+/* Align text centrally */
+
+.testimonial h3{
+  text-align: center;
+}
+```
+
+If you check the final layout in the gif, you will notice that all three testimonial cards are aligned side-by-side on the same line.
+
+So we will need to create a div of three equal columns using the CSS grid arrangement.
+
+```css
+/* Create a grid of three equal columns. Set a gap of 40 px between them */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+
+/* Create a white card with some shadow around it */
+.card {
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
+               7px  7px 20px rgba(0, 0, 0, 0.2)
+}
+```
+
+Finally, we style the circle `div` and position it relative to the top border of the card using CSS:
+
+```css
+.circle {
+  background-color: transparent;
+  border:3px solid purple;
+  height:90px;
+  position: relative;
+  top: -30px;
+  left: 120px;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  width:90px;
+}
+```
